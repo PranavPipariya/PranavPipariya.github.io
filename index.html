@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>0xpermutations</title>
+
+        <meta name="description" content="pranav pipariya. systems & zk." />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            :root {
+                /* Amber CRT Palette */
+                --bg: #000000;
+                --fg: #d0a85c; /* Main readable amber */
+                --dim: #7a6332; /* Darker, subdued amber */
+                --accent: #ffcc00; /* Bright, searing amber highlight */
+            }
+
+            /* brute force reset */
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-color: var(--bg);
+                color: var(--fg);
+                font-family: "La Belle Aurore", cursive;
+                /* Scaled from 13px to 19px */
+                font-size: 19px;
+                line-height: 1.5;
+                /* Scaled Width */
+                max-width: 860px;
+                margin: 100px auto;
+                padding: 0 30px;
+                -webkit-font-smoothing: antialiased;
+                /* subtle CRT scanlines - scaled size */
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.1) 50%,
+                    transparent 50%
+                );
+                background-size: 100% 6px;
+            }
+
+            ::selection {
+                background: var(--accent);
+                color: var(--bg);
+            }
+
+            a {
+                color: var(--fg);
+                text-decoration: none;
+                border-bottom: 1px solid var(--dim);
+                transition: 0s;
+            }
+
+            a:hover {
+                background: var(--accent);
+                color: var(--bg);
+                border-bottom-color: var(--accent);
+            }
+
+            .header {
+                margin-bottom: 48px;
+            }
+
+            h1 {
+                /* Scaled from 20px */
+                font-size: 32px;
+                font-weight: 400;
+                margin-bottom: 24px;
+                color: var(--accent);
+            }
+
+            .bio {
+                color: var(--fg);
+                margin-bottom: 30px;
+                max-width: 100%;
+                /* Scaled from 14px */
+                font-size: 21px;
+            }
+
+            .links {
+                display: flex;
+                gap: 30px;
+                font-size: 19px;
+            }
+
+            .section-header {
+                /* Scaled from 14px */
+                font-size: 20px;
+                color: var(--dim);
+                margin-bottom: 36px;
+                display: block;
+                letter-spacing: 0.12em;
+            }
+
+            .skills {
+                margin-bottom: 60px;
+                font-size: 19px;
+                color: var(--fg);
+                max-width: 100%;
+            }
+
+            /* Project List - minimalist grid */
+            .project {
+                margin-bottom: 48px;
+                display: grid;
+                /* Scaled column width to fit larger text */
+                grid-template-columns: 165px 1fr;
+                gap: 24px;
+            }
+
+            @media (max-width: 650px) {
+                .project {
+                    grid-template-columns: 1fr;
+                    gap: 8px;
+                    margin-bottom: 50px;
+                }
+            }
+
+            .p-name {
+                font-weight: 400;
+                color: var(--accent);
+                /* Scaled from 15px */
+                font-size: 24px;
+            }
+
+            .p-meta {
+                /* Scaled from 11px */
+                font-size: 16px;
+                color: var(--dim);
+                margin-bottom: 6px;
+            }
+
+            .p-desc {
+                color: var(--fg);
+                font-size: 19px;
+            }
+
+            .p-stack {
+                /* Scaled from 11px */
+                font-size: 16px;
+                color: var(--dim);
+                margin-top: 6px;
+            }
+
+            .more-projects {
+                margin-top: 20px;
+                margin-bottom: 12px;
+                /* Scaled from 12px */
+                font-size: 17px;
+                color: var(--dim);
+            }
+
+            .footer {
+                margin-top: 100px;
+                padding-top: 30px;
+                border-top: 1px solid var(--dim);
+                color: var(--dim);
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>0xpermutations</h1>
+
+            <div class="bio">
+                <!--<p>pranav. i mess with code and see what happens.</p>-->
+                <p>pranav. econ major at iitr. programmer. </p>
+                <!--<p>econ at iitr, allegedly.</p>-->
+                <p>
+                    i like it when the complexity collapses into something
+                    obvious.
+                </p>
+            </div>
+
+            <nav class="links">
+                <a href="https://x.com/0xpermutations" target="_blank"
+                    >twitter</a
+                >
+                <a href="mailto:pranav_p@hs.iitr.ac.in">mail</a>
+            </nav>
+        </div>
+
+        <span class="section-header"> recent activity</span>
+
+        <div class="project">
+            <div class="p-name">
+                <a href="https://paac.iitr.ac.in/" target="_blank">paac</a>
+            </div>
+            <div>
+                <div class="p-meta">2024 — present · role</div>
+                <div class="p-desc">
+                    full-stack engineering for paac, iitr’s math & physics
+                    organisation. built the integration bee platform and keep
+                    the web infra alive.
+                </div>
+                <div class="p-stack">react, python, c++</div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="p-name">
+                <a
+                    href="https://github.com/PranavPipariya/swipe-markets"
+                    target="_blank"
+                    >swipemarkets</a
+                >
+            </div>
+            <div>
+                <div class="p-meta">2025 · winner</div>
+                <div class="p-desc">
+                    evm binary options with isolated margin pools. won the
+                    residency trihackathon (1st place).
+                </div>
+                <div class="p-stack">solidity, defi, mechanism design</div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="p-name">
+                <a
+                    href="https://github.com/PranavPipariya/yellow-lane"
+                    target="_blank"
+                    >entropy_arcade</a
+                >
+            </div>
+            <div>
+                <div class="p-meta">2025 · build</div>
+                <div class="p-desc">
+                    verifiable on-chain gaming. used pyth entropy +
+                    commit–reveal to kill mev and front-running.
+                </div>
+                <div class="p-stack">evm, pyth oracle, solidity</div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="p-name">
+                <a
+                    href="https://github.com/PranavPipariya/CognifyCL"
+                    target="_blank"
+                    >cognify_cl</a
+                >
+            </div>
+            <div>
+                <div class="p-meta">2025 · build</div>
+                <div class="p-desc">
+                    local-llm knowledge graph. quantized tinyllama via llama.cpp
+                    for offline browser history summarization and d3.js viz.
+                </div>
+                <div class="p-stack">llama.cpp, tinyllama, d3.js</div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="p-name">
+                <a
+                    href="https://github.com/PranavPipariya/obscura"
+                    target="_blank"
+                    >obscura</a
+                >
+            </div>
+            <div>
+                <div class="p-meta">2025 · build</div>
+                <div class="p-desc">
+                    zk-email whistleblowing. verifies dkim to prove domain
+                    ownership (e.g. @gov.in) without leaking identity. live
+                    <a href="https://obscura-omega.vercel.app/" target="_blank"
+                        >here</a
+                    >.
+                </div>
+                <div class="p-stack">zk-email, circom, privacy</div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="p-name">
+                <a
+                    href="https://github.com/PranavPipariya/slug-park-duels"
+                    target="_blank"
+                    >slug_park</a
+                >
+            </div>
+            <div>
+                <div class="p-meta">2025 · build</div>
+                <div class="p-desc">
+                    2d rpg engine. deterministic state machine for frame-sync
+                    local multiplayer and physics-based movement.
+                </div>
+                <div class="p-stack">godot 4, networking, game dev</div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="p-name">
+                <a href="#" target="_blank">consensus_kv</a>
+            </div>
+            <div>
+                <div class="p-meta">2025 · build</div>
+                <div class="p-desc">
+                    distributed k-v store. wrote raft consensus using raft
+                    library by hashicorp, written in go, to handle leader
+                    election and partitions.
+                </div>
+                <div class="p-stack">go, raft, distributed systems</div>
+            </div>
+        </div>
+
+        <p class="more-projects">
+            more builds on
+            <a href="https://github.com/PranavPipariya" target="_blank"
+                >github</a
+            >.
+        </p>
+    </br>
+    <span class="section-header">skills</span>
+        <div class="skills">
+            <p>
+                ts/js, c++, solidity, go, circom — plus whatever new language
+                the system demands.
+            </p>
+            <p>
+                web programming, zk, blockchains, distributed systems,
+                consensus, deterministic engines.
+            </p>
+        </div>
+
+        <footer class="footer">roorkee, in.</footer>
+    </body>
+</html>

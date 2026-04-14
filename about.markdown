@@ -4,12 +4,15 @@ title: About
 permalink: /about/
 ---
 
-Pranav Pipariya writes here about the kinds of problems that refuse to leave him alone for long: math, systems, zk, distributed protocols, mechanism design, and the occasional side quest that starts as curiosity and turns into a build.
+This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
-He is a pre-final year economics student at IIT Roorkee and likes the moment when a messy thing finally collapses into a clean idea.
+You can find the source code for Minima at GitHub:
+[jekyll][jekyll-organization] /
+[minima](https://github.com/jekyll/minima)
 
-Elsewhere:
+You can find the source code for Jekyll at GitHub:
+[jekyll][jekyll-organization] /
+[jekyll](https://github.com/jekyll/jekyll)
 
-- [GitHub](https://github.com/PranavPipariya)
-- [X / Twitter](https://x.com/0xpermutations)
-- [Mail](mailto:pranav_p@hs.iitr.ac.in)
+
+[jekyll-organization]: https://github.com/jekyll

@@ -1,6 +1,6 @@
 # anyway, where was i
 
-This site is a small Jekyll blog published at `https://pranavpipariya.github.io`.
+This blog is a small Jekyll site published at `https://pranavpipariya.github.io/blog`.
 
 ## Writing posts with SageMath
 

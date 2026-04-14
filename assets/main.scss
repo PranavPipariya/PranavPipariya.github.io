@@ -1,0 +1,160 @@
+---
+---
+
+$background: #050402;
+$panel: #120f0a;
+$text: #eadfbe;
+$muted: #b29b70;
+$line: #3b2d17;
+$accent: #f8bf54;
+$accent-strong: #ffd77a;
+
+@import "minima";
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(248, 191, 84, 0.12), transparent 34rem),
+    linear-gradient(180deg, #090704 0%, $background 28%, #030201 100%);
+  color: $text;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  min-height: 100vh;
+}
+
+.site-header,
+.site-footer {
+  border-color: $line;
+}
+
+.site-title,
+.site-title:visited,
+.page-link,
+.post-link,
+a {
+  color: $accent;
+}
+
+a:hover,
+a:focus {
+  color: $accent-strong;
+}
+
+.wrapper {
+  max-width: 860px;
+}
+
+.site-header {
+  backdrop-filter: blur(8px);
+  background: rgba(5, 4, 2, 0.72);
+  position: sticky;
+  top: 0;
+}
+
+.site-title {
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.page-content {
+  padding-top: 3rem;
+}
+
+.home > p,
+.post-content p,
+.post-content li,
+.page-content p,
+.page-content li {
+  font-size: 1.12rem;
+  line-height: 1.85;
+}
+
+.home > p:first-of-type {
+  font-size: 1.45rem;
+  color: $accent-strong;
+  margin-bottom: 0.5rem;
+}
+
+.home > p:last-of-type {
+  color: $muted;
+  font-size: 0.98rem;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+}
+
+.post-list-heading,
+.post-title,
+.page-heading,
+.post-content h2,
+.post-content h3,
+.page-content h2,
+.page-content h3 {
+  color: $accent-strong;
+  letter-spacing: 0.01em;
+}
+
+.post-meta,
+.footer-col-wrapper,
+.social-media-list,
+.site-footer,
+.rss-subscribe {
+  color: $muted;
+}
+
+.post-list > li,
+.post-navigation,
+pre,
+code,
+blockquote {
+  border-color: $line;
+}
+
+pre,
+code {
+  background: rgba(18, 15, 10, 0.92);
+  color: $text;
+}
+
+pre {
+  border: 1px solid $line;
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+}
+
+blockquote {
+  background: rgba(248, 191, 84, 0.05);
+  border-left: 4px solid $accent;
+  color: $muted;
+  padding: 0.9rem 1rem;
+}
+
+.sage-output {
+  background: rgba(18, 15, 10, 0.94);
+  border: 1px solid $line;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+  margin: 2rem 0;
+  padding: 1.25rem;
+}
+
+.sage-output h2 {
+  margin-top: 0;
+}
+
+.site-footer {
+  background: rgba(5, 4, 2, 0.45);
+}
+
+@media screen and (max-width: 600px) {
+  .page-content {
+    padding-top: 2rem;
+  }
+
+  .home > p:first-of-type {
+    font-size: 1.25rem;
+  }
+
+  .home > p,
+  .post-content p,
+  .page-content p {
+    font-size: 1.02rem;
+  }
+}

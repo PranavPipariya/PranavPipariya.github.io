@@ -1,0 +1,17 @@
+title: anyway, where was i
+author: Pranav Pipariya
+email: pranav_p@hs.iitr.ac.in
+description: >-
+  Notes, experiments, and half-finished obsessions around math, systems, zk,
+  protocols, and whatever else keeps pulling me back.
+baseurl: ""
+url: "https://pranavpipariya.github.io"
+twitter_username: 0xpermutations
+github_username: PranavPipariya
+show_excerpts: true
+header_pages:
+  - about.markdown
+
+theme: minima
+plugins:
+  - jekyll-feed

@@ -1,0 +1,64 @@
+---
+---
+
+@import "minima";
+
+html {
+  font-size: 18px;
+}
+
+body {
+  line-height: 1.7;
+}
+
+.site-title {
+  font-size: 1.55rem;
+}
+
+.page-link,
+.post-meta,
+.footer-col-wrapper {
+  font-size: 0.95rem;
+}
+
+.page-heading,
+.post-list-heading {
+  font-size: 1.9rem;
+}
+
+.post-link {
+  font-size: 1.45rem;
+  line-height: 1.35;
+}
+
+.post-title {
+  font-size: 2.2rem;
+  line-height: 1.15;
+}
+
+.page-content,
+.post-content {
+  font-size: 1.06rem;
+}
+
+.post-content h2 {
+  font-size: 1.65rem;
+}
+
+.post-content h3 {
+  font-size: 1.35rem;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 17px;
+  }
+
+  .post-title {
+    font-size: 1.9rem;
+  }
+
+  .post-link {
+    font-size: 1.3rem;
+  }
+}

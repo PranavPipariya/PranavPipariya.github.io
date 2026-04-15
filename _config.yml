@@ -20,12 +20,13 @@
 
 title: anyway, where was i
 author: Pranav Pipariya
+website_url: https://pranavpipariya.com
 description: >- # this means to ignore newlines until "baseurl:"
   things i find myself repeating 
 baseurl: ""  
 url: "https://pranavpipariya.github.io" 
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: 0xpermutations
+github_username: PranavPipariya
 
 # Build settings
 theme: minima

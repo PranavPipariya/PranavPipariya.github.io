@@ -1,23 +1,56 @@
 # anyway, where was i
 
-This blog is a small Jekyll site published at `https://pranavpipariya.github.io/blog`.
+This is a small Jekyll blog published at `https://pranavpipariya.github.io`.
 
-## Writing posts with SageMath
+## Writing a new post
 
-GitHub Pages will not run SageMath for you during deploy, so the workflow here is:
+Fastest way:
 
-1. Write the post in `_posts/`.
-2. Put the SageMath code for that post in `sage/<slug>.sage`.
-3. Run `./scripts/build_sage_posts.sh <slug>` locally.
-4. Commit both the post and the generated files.
-
-The generated output lives in `_includes/generated/` so posts can embed it with:
-
-```liquid
-{% raw %}{% include generated/<slug>.html %}{% endraw %}
+```bash
+./scripts/new_post.sh "your title"
 ```
 
-## Notes
+That creates the markdown file for you.
 
-- If `sage` says it needs permission to reconfigure itself on macOS, open `SageMath-10-8.app` once from the GUI and rerun the script.
-- If you want a local Jekyll preview, install the Bundler version from `Gemfile.lock` and run `bundle exec jekyll serve`.
+To delete a post:
+
+```bash
+./scripts/new_post.sh --delete "your title"
+```
+
+or:
+
+```bash
+./scripts/new_post.sh --delete _posts/YYYY-MM-DD-your-title.md
+```
+
+Manual way:
+
+Create a file in `_posts/` named like:
+
+```text
+YYYY-MM-DD-your-title.md
+```
+
+Use this shape:
+
+```markdown
+---
+layout: post
+title: "your title"
+date: YYYY-MM-DD HH:MM:SS +0530
+categories: whatever you want
+---
+
+write whatever you want
+```
+
+That is enough. Jekyll will automatically put it on the homepage and generate the post page.
+
+## Local preview
+
+```bash
+bundle _2.6.9_ exec jekyll serve
+```
+
+Then open `http://127.0.0.1:4000`.
